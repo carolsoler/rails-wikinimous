@@ -1,0 +1,21 @@
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css">
+
+<!-- <div class="alert alert-info fade in">
+    <button class="close" data-dismiss="alert">×</button>
+    Article was successfully created.
+  </div> -->
+
+  <p id="notice"><%= notice %></p>
+
+<div class="title">
+  <h1><%= @article.title %></h1><%= link_to raw("<i class='far fa-trash-alt'></i>"), article_path(@article),
+    method: :delete,
+    data: { confirm: "Are you sure?" } %>
+    <%= link_to raw("<i class='fas fa-pencil-alt'></i>"), edit_article_path(@article) %>
+</div>
+
+<div class="content">
+  <p><%=  @article.content %></p>
+</div>
+
+
